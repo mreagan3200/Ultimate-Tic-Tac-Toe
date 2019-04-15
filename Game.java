@@ -80,6 +80,16 @@ public class Game {
 	public int getTurn() {
 		return turn;
 	}
+	public Player getPlayer(int i) {
+		switch(i) {
+		case 1:
+			return p1;
+		case 2:
+			return p2;
+		default:
+			return null;
+		}
+	}
 	public static boolean isValid(Move m, Move prev, int[][] b) {
 		if(prev == null)
 			return b[m.getRow()][m.getCol()] == 0;
