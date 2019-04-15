@@ -25,4 +25,8 @@ public class Player {
 	public int turn() {
 		return g.getTurn();
 	}
+	@Override
+	public String toString() {
+		return s.toString();
+	}
 }
