@@ -38,8 +38,8 @@ public class Display extends JComponent implements MouseListener {
 	public void paintComponent(Graphics g) {
 		int turn = game.getTurn();
 		if((turn & 1) == 1)
-			frame.setTitle("UTTT O's turn (turn " + turn + ")");
-		else frame.setTitle("UTTT X's turn (turn " + turn + ")");
+			frame.setTitle("UTTT " + game.getPlayer(2).toString() + " (O)'s turn (turn " + turn + ")");
+		else frame.setTitle("UTTT " + game.getPlayer(1).toString() + " (X)'s turn (turn " + turn + ")");
 		g.setColor(Color.WHITE);
 		g.fillRect(0, 0, WIDTH, WIDTH);
 		g.setColor(Color.LIGHT_GRAY);
